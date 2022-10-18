@@ -1,0 +1,34 @@
+.pag_blogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bodyAnm 1s ease 1;
+}
+
+@keyframes bodyAnm {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pag_blogs>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pag_blogs>ul>.pag-li {
+    background-color: var(--shade-yellow-primary);
+}
+
+.pag_blogs>ul>.pag-li>a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 10px;
+    background-color: var(--shade-red-primary);
+}

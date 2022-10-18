@@ -1,0 +1,181 @@
+.events-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+}
+
+.events-title {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.events-title>h1::first-letter {
+    color: var(--shade-yellow-primary);
+    font-style: cursive;
+}
+
+.events-container>.event-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 40%;
+    margin: 10px 20px;
+    height: 200px;
+    background-color: var(--text-primary);
+}
+
+.events-container>.event-main>.event-date {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px 50px;
+    height: 100%;
+}
+
+.events-container>.event-main>.event-date>.date {
+    color: var(--shade-yellow-primary);
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: cursive;
+}
+
+.events-container>.event-main>.event-date>.day {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.events-container>.event-main>.event-content {
+    padding: 20px 20px;
+    overflow: auto;
+    height: max-content;
+}
+
+.events-container>.event-main>.event-content>.event-content-header {
+    margin: 10px 0;
+}
+
+.events-container>.event-main>.event-content>.event-content-header>p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--background-primary);
+}
+
+.events-container>.event-main>.event-content>.event-content-header>p::first-letter {
+    font-family: cursive;
+    color: var(--shade-red-primary);
+}
+
+.events-container>.event-main>.event-content>.event-content-description {
+    font-size: 1rem;
+    padding: 10px 0px;
+    overflow: auto;
+}
+
+.events-container>.event-main>.event-content>.event-more-btn {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.events-container>.event-main>.event-content>.event-more-btn>a,
+.more-events>a {
+    padding: 10px 20px;
+    background-color: var(--shade-red-primary);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.events-container>.event-main>.event-content>.event-more-btn>a {
+    border: 1px dashed var(--shade-red-primary);
+}
+
+.events-container>.event-main>.event-content>.event-more-btn>a:hover,
+.more-events>a:hover {
+    background-color: var(--text-primary);
+    color: var(--shade-red-primary);
+}
+
+.more-events {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+@media screen and (max-width: 854px) {
+    .events-title {
+        padding: 0px 0;
+    }
+    .events-container>.event-main {
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 10px 20px;
+        height: 200px;
+        background-color: var(--text-primary);
+    }
+    .events-container>.event-main>.event-date {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        height: 100%;
+    }
+    .events-container>.event-main>.event-date>.date {
+        color: var(--shade-yellow-primary);
+        font-size: 2rem;
+        font-weight: 800;
+        font-family: cursive;
+    }
+    .events-container>.event-main>.event-date>small {
+        font-size: 0.5rem;
+    }
+    .events-container>.event-main>.event-date>.day {
+        color: var(--text-primary);
+        font-size: 0.8rem;
+    }
+    .events-container>.event-main>.event-content {
+        padding: 10px 10px;
+        overflow: auto;
+        height: max-content;
+    }
+    .events-container>.event-main>.event-content>.event-content-header {
+        margin: 10px 0;
+    }
+    .events-container>.event-main>.event-content>.event-content-header>p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--background-primary);
+    }
+    .events-container>.event-main>.event-content>.event-content-header>p::first-letter {
+        font-family: cursive;
+        color: var(--shade-red-primary);
+    }
+    .events-container>.event-main>.event-content>.event-content-description {
+        font-size: 1rem;
+        padding: 5px 0px;
+        max-height: 80px;
+        overflow: auto;
+        margin-bottom: 5px;
+    }
+    .events-container>.event-main>.event-content>.event-more-btn {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

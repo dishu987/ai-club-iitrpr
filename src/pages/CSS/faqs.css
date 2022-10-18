@@ -1,0 +1,119 @@
+.heading {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    font-size: 3rem;
+}
+
+.heading>h1::first-letter {
+    color: var(--shade-yellow-primary);
+    font-family: cursive;
+}
+
+
+/* Question */
+
+h1 {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+
+.accordion {
+    max-width: 100%;
+    margin: 2rem auto;
+    outline: none;
+    animation: bodyAnm 1s ease 1;
+}
+
+@keyframes bodyAnm {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--shade-red-primary);
+    transition: 0.5s ease;
+    outline: none;
+}
+
+.accordion-title:hover {
+    background-color: var(--shade-red-secondary);
+}
+
+.accordion-title,
+.accordion-content {
+    padding: 20px 20px;
+}
+
+.accordion-title>div {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.accordion-title>div::first-letter {
+    font-family: cursive;
+    color: var(--shade-yellow-primary);
+}
+
+.accordion-content {
+    background-color: var(--text-primary);
+    color: var(--background-primary);
+    transition: 1s ease;
+    opacity: 0;
+    height: 0;
+    display: none;
+}
+
+.accordion-content-active::first-letter {
+    color: var(--shade-red-primary);
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+.accordion-content-active {
+    background-color: var(--text-primary);
+    color: var(--background-primary);
+    transition: 0.5s ease;
+    padding: 30px 20px;
+    animation: showAnm 0.5s ease-in-out 1 both;
+}
+
+@keyframes showAnm {
+    from {
+        display: none;
+        opacity: 0;
+        transform: rotateX(-180deg) scale(0.9);
+        transform-origin: top;
+    }
+    to {
+        display: flex;
+        opacity: 1;
+        transform: rotateX(0) scale(1);
+        transform-origin: top;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 18px;
+    }
+    .accordion {
+        width: 90%;
+    }
+}
